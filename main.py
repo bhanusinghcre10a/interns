@@ -5,6 +5,7 @@ def solution(D):
   ans={}
   for i in D.items():
     let.append([int(j) for j in i[0].split('-')]+[i[1]])
+  let.sort()
   def finddays(d1,d2):
     months=[31,28,31,30,31,30,31,31,30,31,30,31]
     days1=d1[0]*365+d1[2]
@@ -57,4 +58,4 @@ def solution(D):
         prev[3]+=med
         x-=1
       ans[str(let[i][0])+'-'+str(let[i][1])+'-'+str(let[i][2])]=let[i][3]
-      return ans
+  return ans
